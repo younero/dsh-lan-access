@@ -1,6 +1,6 @@
 {
-  "name": "dsh-lan-access",
-  "version": "0.2.1",
+  "name": "@lieliefengzhong/dsh-lan-access",
+  "version": "0.2.2",
   "description": "Authenticated LAN HTTP and WebSocket port forwarding for DeepSeek Harness.",
   "keywords": [
     "dsh",
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Leon0555/dsh-lan-access.git"
+    "url": "git+https://github.com/younero/dsh-lan-access.git"
   },
   "type": "module",
   "main": "lib/index.js",

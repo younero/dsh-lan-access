@@ -10,7 +10,7 @@
 # terminates TLS + identity (Tailscale Serve, Cloudflare Tunnel, SSH -L).
 - insert:
     - id: dsh-lan-access
-      name: dsh-lan-access
+      name: '@lieliefengzhong/dsh-lan-access'
       config:
         enabled: true
         host: 0.0.0.0

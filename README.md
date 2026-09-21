@@ -4,6 +4,14 @@
 
 ## 安装
 
+从 npm 安装：
+
+```bash
+dsh plugin --profile web add @lieliefengzhong/dsh-lan-access
+```
+
+本地开发安装：
+
 ```bash
 dsh plugin --profile web add /home/zhuyongchun/codes/dsh-lan-access
 ```
