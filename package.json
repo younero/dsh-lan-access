@@ -1,6 +1,6 @@
 {
   "name": "@lieliefengzhong/dsh-lan-access",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Authenticated LAN HTTP and WebSocket port forwarding for DeepSeek Harness.",
   "keywords": [
     "dsh",

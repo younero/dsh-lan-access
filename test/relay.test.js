@@ -4,8 +4,14 @@ import http from 'node:http'
 import net from 'node:net'
 import crypto from 'node:crypto'
 import { startRelay, PAIR_PATH, PRIVILEGED_METHODS } from '../lib/relay.js'
+import { normalizeConfig } from '../lib/index.js'
 
 const TOKEN = 'test-key-123'
+
+test('normalizeConfig exposes optional privileged RPC blocking', () => {
+  assert.equal(normalizeConfig({}).blockPrivileged, false)
+  assert.equal(normalizeConfig({ blockPrivileged: true }).blockPrivileged, true)
+})
 
 function listen(server) {
   return new Promise((resolve, reject) => {

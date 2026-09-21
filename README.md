@@ -35,6 +35,8 @@ dsh --profile web --patch /home/zhuyongchun/codes/dsh-lan-access/cordis.patch.ym
     # 不填则每次启动随机生成密钥并打印访问链接
     # token: 'your-strong-static-key'
     sessionTtlMs: 2592000000
+    # true 时拒绝设置、凭据、目录选择和模型探测等高风险 RPC
+    blockPrivileged: false
 ```
 
 启动后终端会打印类似：
@@ -44,6 +46,8 @@ dsh-lan-access: 手机访问入口: http://192.168.1.23:8790/?k=<访问密钥>
 ```
 
 手机和电脑在同一局域网时打开这个链接即可。密钥会换成签名 cookie，HTTP 请求和 WebSocket 升级都会转发到当前 dsh Web 服务，工作区和会话保持一致。
+
+将 `blockPrivileged` 设为 `true` 可以进一步限制手机端权限，但手机端将不能修改 DSH 设置、管理凭据、选择本机目录或探测模型。
 
 ## 安全说明
 
