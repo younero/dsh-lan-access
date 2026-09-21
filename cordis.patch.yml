@@ -1,0 +1,20 @@
+# dsh-lan-access patch layer.
+#
+# Applied after the profile's bundles; the row id is the plugin's Cordis id and
+# `name` is the package that must resolve from the profile directory (install
+# with: dsh plugin --profile web add <this package>).
+#
+# Relay is OFF by default: it opens a LAN port that reaches the agent loop
+# (i.e. arbitrary code execution on your machine). Turn it on per profile with
+# the config below only on a network you trust, or front it with a tunnel that
+# terminates TLS + identity (Tailscale Serve, Cloudflare Tunnel, SSH -L).
+- insert:
+    - id: dsh-lan-access
+      name: dsh-lan-access
+      config:
+        enabled: true
+        host: 0.0.0.0
+        port: 8790
+        # Omit to auto-generate a key printed at boot.
+        # token: 'set-a-strong-static-key-here'
+        sessionTtlMs: 2592000000
