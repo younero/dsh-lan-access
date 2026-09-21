@@ -4,23 +4,19 @@
 
 ## 安装
 
-从 npm 安装：
+从 GitHub 源码安装：
+
+```bash
+dsh plugin --profile web add https://github.com/younero/dsh-lan-access.git
+```
+
+也可以从 npm 安装已发布版本：
 
 ```bash
 dsh plugin --profile web add @lieliefengzhong/dsh-lan-access
 ```
 
-本地开发安装：
-
-```bash
-dsh plugin --profile web add /home/zhuyongchun/codes/dsh-lan-access
-```
-
-插件默认加入 profile，但转发默认关闭。启动器也可以直接叠加 patch：
-
-```bash
-dsh --profile web --patch /home/zhuyongchun/codes/dsh-lan-access/cordis.patch.yml --no-open
-```
+插件默认加入 profile，但转发默认关闭。安装后重启 `dsh web` 使配置生效。
 
 ## 配置
 
